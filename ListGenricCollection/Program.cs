@@ -13,67 +13,79 @@ namespace ListGenricCollection
 
             Employee emp1 = new Employee()
             {
-                Names="aayush",
-                Age=15,
-                Designation="Manager"
+                Names = "aayush",
+                Age = 15,
+                Designation = "Manager"
             };
 
             Employee emp2 = new Employee()
             {
                 Names = "Kumar",
-                Age = 11,
+                Age = 22,
                 Designation = "Assitent"
             };
 
             Employee emp3 = new Employee()
             {
                 Names = "Mandal",
-                Age = 20,
+                Age = 21,
                 Designation = "operator"
             };
 
             List<Employee> emplist = new List<Employee>();
             emplist.Add(emp1);
-            emplist.Add(emp1);
+            emplist.Add(emp2);
             emplist.Add(emp3);
 
             foreach (Employee emp in emplist)
             {
                 Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
             }
+            emplist.RemoveAll(emp => emp.Age>20);
+            Console.WriteLine("----------------------------------------");
+            foreach (Employee emp in emplist)
+            {
+                Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+            }
 
-         //   List<int> mynumbers = new List<int>();
-         //   mynumbers.Add(11);
-         //   mynumbers.Add(22);
-         //   mynumbers.Add(33);
-         //   mynumbers.Add(44);
-         //   mynumbers.Add(55);
-         //   mynumbers.Add(66);
-         //   mynumbers.Add(77);
-         //   mynumbers.Add(88);
-         //   //foreach (int item in mynumbers)
-         //   //{
-         //   //    Console.WriteLine(item);
-         //   //}
-         ////  Console.WriteLine("---------------------------");
-         //   List<string> names = new List<string>();
-         //   names.Add("Aayush");
-         //   names.Add("Kumar");
-         //   names.Add("Mandal");
-         //   //foreach(string a in names)
-         //   //{
-         //   //    Console.WriteLine(a);
-         //   //}
-    
-
-
-
+            //List<int> mynumbers = new List<int>();
+            //mynumbers.Add(55);//0
+            //mynumbers.Add(11);//1
+            //mynumbers.Add(44);//2
+            //mynumbers.Add(33);//3
+            //mynumbers.Add(22);//4
+            //// Console.WriteLine(mynumbers.Count);
+            //foreach (int item in mynumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //  mynumbers.Sort();
+            //mynumbers.AddRange(mynumbers);
+            // mynumbers.Insert(1, 10);
+            // mynumbers.InsertRange(3, mynumbers);
+            //mynumbers.Remove(33);
+            // mynumbers.RemoveAt(3);
+            //mynumbers.RemoveRange(2, 2);
 
 
+            //Console.WriteLine("---------------------------");
 
+            //foreach (int item in mynumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            // Console.WriteLine(mynumbers.Count);
 
-
-
+            //List<string> names = new List<string>();
+            //names.Add("aayush");
+            //names.Add("kumar");
+            //names.Add(null);
+            //names.Add("Kumar");
+            //names.Add("mandal");
+            //foreach(string a in names)
+            //{
+            //    Console.WriteLine(a);
+            //}
 
 
             //mynumbers.Add(99);
