@@ -37,16 +37,51 @@ namespace ListGenricCollection
             emplist.Add(emp2);
             emplist.Add(emp3);
 
-            foreach (Employee emp in emplist)
+
+
+
+
+            Employee[] emps = emplist.ToArray();
+            foreach (Employee emp in emps)
             {
-                Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+                   Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);                                                         
+
             }
-            emplist.RemoveAll(emp => emp.Age>20);
-            Console.WriteLine("----------------------------------------");
-            foreach (Employee emp in emplist)
+            List<Employee> myemps = emps.ToList();
+            Console.WriteLine("----------------------------------");
+            foreach (Employee emp in myemps)
             {
-                Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+                    Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+
             }
+            //  Console.WriteLine(emplist.FindLastIndex(emp => emp.Age > 20));
+            //List<Employee> emps = emplist.FindAll(e => e.Age > 20);
+            //foreach (Employee emp in emps)
+            //{
+            //    Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+
+            //}
+
+            //Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);                                                                                
+
+            //Console.WriteLine(emplist.Exists(emp => emp.Names.StartsWith("a")));
+
+
+
+
+            //Employee emp = emplist.Find(e => e.Age > 20);
+            //    Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);                                                                                
+
+            //foreach (Employee emp in emplist)
+            //{
+            //    Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+            //}
+            //emplist.RemoveAll(emp => emp.Age>20);
+            //Console.WriteLine("----------------------------------------");
+            //foreach (Employee emp in emplist)
+            //{
+            //    Console.WriteLine("Employee name is:{0} age is :{1} designation is:{2}", emp.Names, emp.Age, emp.Designation);
+            //}
 
             //List<int> mynumbers = new List<int>();
             //mynumbers.Add(55);//0
@@ -54,6 +89,11 @@ namespace ListGenricCollection
             //mynumbers.Add(44);//2
             //mynumbers.Add(33);//3
             //mynumbers.Add(22);//4
+            //mynumbers.Add(33);//5
+
+
+            //Console.WriteLine(mynumbers.IndexOf(33,4));
+            //Console.WriteLine(mynumbers.Contains(44));
             //// Console.WriteLine(mynumbers.Count);
             //foreach (int item in mynumbers)
             //{
@@ -67,7 +107,7 @@ namespace ListGenricCollection
             // mynumbers.RemoveAt(3);
             //mynumbers.RemoveRange(2, 2);
 
-
+            //mynumbers.Reverse();
             //Console.WriteLine("---------------------------");
 
             //foreach (int item in mynumbers)
